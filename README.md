@@ -1,0 +1,2 @@
+# Plus-Health
+Plus health is a family of health applications and services that makes it easier for a person to be healthy, makes it easier for hospital and doctors to directly track a patient's health and communicate with patients swiftly. Plus health helps a patient to keep track of his symptoms and predict the disease according to it and makes it possible for patients to seamlessly schedule an appointment with doctors.
