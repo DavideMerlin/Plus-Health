@@ -33,7 +33,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="#pricing">DeveloperChat</a></li>
+                    <li><a href="#DeveloperChat">DeveloperChat</a></li>
                     <li><a href="#pricing">Payment History</a></li>
                     <li><a href="#contact">Contact              </a></li>
                 </ul>
@@ -99,9 +99,8 @@
         <div class="jumbotron text-center stage"> <h1>YOUR ARE FREAKING LOGGED IN, CONGRATS!!</h1></div>    
         
         <div class = "container col-sm-12">
-            <div class ="col-sm-1"></div>
-            <div class="jumbotron col-sm-4">
-                <h1 class ="display-4"> Developer Message Tab </h1>
+            <div class="jumbotron col-sm-5">
+                <h1 id = "DeveloperChat"class ="display-4">Developer Chat</h1>
                 <br>
                 <label >Name</label>
                 <input id = "name"class = "form-control" placeholder="Enter your name">
@@ -112,12 +111,11 @@
                 <button id = "send" class="btn btn-primary btn-lg">Send</button>
             </div>
             <div class ="col-sm-1"></div>
-            <div id = "messages" class="jumbotron col-sm-5">
+            <div id = "messages" class="jumbotron col-sm-6">
                     <h2 class ="display-4"><strong>Messages</strong></h2>
-            </div>
-            <div class ="col-sm-1"></div>
+            </div>  
         </div>
-        
+    </div>  
 
 
         
@@ -166,9 +164,9 @@
     </div>
     </div>
     </div> -->
-    <div class="row">
+    <div class="row" >
         <div class="col-sm-2 "></div>
-        <div class="col-sm-8 ">
+        <div class="col-sm-8 "id ="contact">
                 <div class="col-sm-2 ">
                         <h3><strong>Social Media</strong></h3>
                     </div>
@@ -182,7 +180,7 @@
                 </div>
                 <div class = "col-sm-2">
                         <p class="text-center"><strong>Apply to work for us, bro</strong></p><br>
-                        <a href="https://www.linkedin.com/" data-toggle="collapse" class="fa fa-linkedin text-center">
+                        <a href="https://www.linkedin.com/" data-toggle="collapse" class="fa fa-linkedin">
                         </a>
                 </div>
             
@@ -191,16 +189,19 @@
         </div>
         <div class="col-sm-2 ">
             
+        </div>
     </div>
-        
     
 
     <footer class="container-fluid text-center">
+        
+        <div class = "col-sm-12">
         <a href="#myPage" title="To Top">
             <span class="glyphicon glyphicon-chevron-up"></span>
         </a>
         <a href="https://www.linkedin.com/in/bikashrumey">Visit Our LinkedIn Profile!</a>
         <p>For suggestions, please contact us at <a href="mailto:bruwali@troy.edu">Bikash Ruwali </a><a> or </a><a href="mailto:dkhati@troy.edu">Dipin Khati</a></p>
+        </div>
     </footer>
 
 
@@ -220,7 +221,7 @@
     function addMessage(message){
         n = message.name
         p = message.message
-        $("#messages").append(' <h4>'+n+ '</h4>'+ '<p>'+ p+'</p> ')
+        $("#messages").append(' <p><strong>'+n+ '</strong>'+': '+ p+'</p> ')
     }
     function getMessages(){
         $.get('http://localhost:3000/messages', (data) => {
