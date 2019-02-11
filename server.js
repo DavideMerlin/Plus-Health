@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 var dbUrl = 'mongodb+srv://user:user@plushealth-iizho.mongodb.net/plushealth?ssl=true&authSource=admin'
 
-var Message = mongoose.model('Message', {
+var Message = mongoose.model('Message', { 
     name: String,
     message: String
 })

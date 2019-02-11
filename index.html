@@ -53,51 +53,88 @@
                     <div class="col-sm-2 form-group">
 
                     </div>
-                    <div class="col-sm-2 form-group">
+                    <div class="col-sm-3 form-group">
                         <label >Username</label>
                         <input class="form-control" id="Username" name="Username" placeholder="Enter your Username" type="text" required>
                     </div>
-                    <div class="col-sm-2 form-group">
+                    <div class="col-sm-3 form-group">
                         <label >Password</label>
                         <input class="form-control" id="Password" name="Password" placeholder="Enter your password" type="password" required>
                     </div>
-                    
-                        <a class="btn btn-default btn-lg col-sm-1 form-group" href="home.html" role="button">Sign In</a>
-                   
+                    <div class="col-sm-2 form-group">
+                        <a class="btn btn-default btn-lg " href="home.html" role="button">Login</a>
+                   </div>
                 </div>
             </div>
         </form>
-        <form id="signup" class="form-inline text-center hidden-element">
+        <form id="signup" class="form-inline text-left hidden-element">
             <div class="container">
                 <br />
                 <div class="col-sm-12">
-                    <label for="FirstName" ><b>First Name</b></label>
-                    <input type="text" placeholder="Enter your First Name" name="uname" required>
-                    <br>
-                    <label for="LastName"><b>Last Name</b></label>
-                    <input type="text" placeholder="Enter your Last Name" name="uname" required>
-                    <br>
-                    <label for="Email-Address" ><b>Email-Address</b></label>
-                    <input type="text" placeholder="Enter your Email-address" name="uname" required>
-                    <br>
-                    <label for="PhoneNumber" ><b>PhoneNumber</b></label>
-                    <input type="text" placeholder="Enter your PhoneNumber" name="uname" required>
-                    <br>
-                    <label for="Test" ><b>Willing to test your level?</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-                    <br>
-                    <label for="Username" ><b>Username</b></label>
-                    <input type="text" placeholder="Enter your Desired Username" name="uname" required>
-                    <br>
-                    <label for="psw" ><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required><br>
-                    <label for="psw" ><b>Verify Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
-                    
-                    <div class="row justify-content-center">
-                            <a class="btn btn-default btn-lg" href="home.html" role="button">Sign up</a>
-                            <a class="btn btn-primary btn-lg" href="index.html" role="button">Cancel</a>
+                    <div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3"><label for="FirstName" ><b>First Name</b></label></div>
+                        <div class="col-sm-5"><input type="text" placeholder="Enter your First Name" name="fname" required><br></div>
+                        <div class="col-sm-1"></div>
                     </div>
+                    <div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3"><label for="LastName"><b>Last Name</b></label></div>
+                        <div class="col-sm-5"><input type="text" placeholder="Enter your Last Name" name="lname" required><br></div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="Email-Address" ><b>Email-Address</b></label></div>
+                            <div class="col-sm-5"><input type="text" placeholder="Enter your Email-address" name="uname" required><br></div>
+                            <div class="col-sm-1"></div>
+                    </div>
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="PhoneNumber" ><b>PhoneNumber</b></label></div>
+                            <div class="col-sm-5"><input type="text" placeholder="Enter your PhoneNumber" name="uname" required><br></div>
+                            <div class="col-sm-1"></div>
+                    </div>   
+                   
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="Username"><b>Username</b></label></div>
+                            <div class="col-sm-5"><input type="text" placeholder="Enter your Desired Username" name="uname" required><br></div>
+                            <div class="col-sm-1"></div>
+                    </div>
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="psw" ><b>Password</b></label></div>
+                            <div class="col-sm-5"><input type="password" placeholder="Enter Password" name="psw" required><br></div>
+                            <div class="col-sm-1"></div>
+                    </div>
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="psw" ><b>Verify Password</b></label></div>
+                            <div class="col-sm-5"><input type="password" placeholder="Enter Password" name="psw" required><br></div>
+                            <div class="col-sm-1"></div>
+                    </div>
+                   
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="Test" ><b>Choose your user Profile</b></label></div>
+                            <div class="col-sm-5"><select class="custom-select" id="inputGroupSelect03">
+                                    <option selected>Choose...</option>
+                                    <option value="1">Doctor</option>
+                                    <option value="2">Patient</option>
+                                    <option value="3">Health Enthusiast</option>
+                                    <option value="4">Developer</option>
+                                  </select></div>
+                    </div>
+                    <div class="col-sm-12"></div>
+                    <div>
+                        <div class="col-sm-4"></div>    
+                        <div class="col-sm-2"><a class="btn btn-default btn-lg" href="home.html" role="button">Sign up</a></div>
+                        <div class="col-sm-2"><a class="btn btn-primary btn-lg" href="index.html" role="button">Cancel</a><br></div>
+                            
+                    </div>
+    
+                   
                 </div>    
             </div>
 

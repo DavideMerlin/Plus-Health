@@ -331,3 +331,26 @@ section#newsletter form{
     text-align: center;
     text-decoration: none;
 }
+textarea:focus, input:focus {
+    color: lightslategrey;
+}
+
+input, select, textarea{
+    color:lightslategrey;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: lightslategrey;;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: lightslategrey;;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color:lightslategrey;;
+  }
+  
+.pre-scrollable {
+    max-height: 500px
+}
