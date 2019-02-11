@@ -22,12 +22,17 @@ h4 {
 }
 
 .jumbotron {
+    color: lightslategrey;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+}
+
+.stage {
     background-image: url("jumbo.png");
     color: #ffff;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
 }
-
 .container-fluid {
     padding: 60px 50px;
 }
