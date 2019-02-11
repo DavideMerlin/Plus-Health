@@ -16,7 +16,6 @@ var Message = mongoose.model('Message', {
     message: String
 })
 
-
 app.get('/messages', (req, res) => {
     Message.find({},(err, messages) => {
         res.send(messages)
@@ -29,7 +28,7 @@ app.post('/messages', (req, res) => {
     message.save()
     .then( item => {
         console.log("item saved to database")
-        messages.push(req.body)
+        
         io.emit('message',req.body)
         res.sendStatus(200)
     
