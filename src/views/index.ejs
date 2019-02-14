@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset= "utf-8">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    
+    
+    <link href="css/styles.css" rel="stylesheet" />
+
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <img src="images/logo.png" width="150" height="50"/>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <%for(let i = 0; i < nav.length; i++) {%>
+                   <li>
+                        <a href="<%=nav[i].link%>"><%=nav[i].title%></a>
+                   </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center stage">
+        <h1><%=title%></h1>
+        <p>Changing the Health Sector</p>
+        <figure class="ball"></figure>
+        <figure class="ball1"></figure>
+        <div class="row justify-content-center">
+            <a id="sign-btn" class="btn btn-default btn-lg" href="#" role="button">Sign in</a>
+            <a id="sign-btn1" class="btn btn-primary btn-lg" href="#" role="button">Sign up</a>
+
+        </div>
+        <form id="signin" class="form-inline text-center hidden-element">
+            <div class="container">
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-sm-2 form-group">
+
+                    </div>
+                    <div class="col-sm-3 form-group">
+                        <label >Username</label>
+                        <input class="form-control" id="Username" name="Username" placeholder="Enter your Username" type="text" required>
+                    </div>
+                    <div class="col-sm-3 form-group">
+                        <label >Password</label>
+                        <input class="form-control" id="Password" name="Password" placeholder="Enter your password" type="password" required>
+                    </div>
+                    <div class="col-sm-2 form-group">
+                        <a class="btn btn-default btn-lg " href="home" role="button">Login</a>
+                   </div>
+                </div>
+            </div>
+        </form>
+        <form id="signup" class="form-inline text-left hidden-element">
+            <div class="container">
+                <br />
+                <div class="col-sm-12">
+                    <div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3"><label for="FirstName" ><b>First Name</b></label></div>
+                        <div class="col-sm-5"><input type="text" placeholder="Enter your First Name" name="fname" required><br></div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3"><label for="LastName"><b>Last Name</b></label></div>
+                        <div class="col-sm-5"><input type="text" placeholder="Enter your Last Name" name="lname" required><br></div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="Email-Address" ><b>Email-Address</b></label></div>
+                            <div class="col-sm-5"><input type="text" placeholder="Enter your Email-address" name="uname" required><br></div>
+                            <div class="col-sm-1"></div>
+                    </div>
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="PhoneNumber" ><b>PhoneNumber</b></label></div>
+                            <div class="col-sm-5"><input type="text" placeholder="Enter your PhoneNumber" name="uname" required><br></div>
+                            <div class="col-sm-1"></div>
+                    </div>   
+                   
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="Username"><b>Username</b></label></div>
+                            <div class="col-sm-5"><input type="text" placeholder="Enter your Desired Username" name="uname" required><br></div>
+                            <div class="col-sm-1"></div>
+                    </div>
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="psw" ><b>Password</b></label></div>
+                            <div class="col-sm-5"><input type="password" placeholder="Enter Password" name="psw" required><br></div>
+                            <div class="col-sm-1"></div>
+                    </div>
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="psw" ><b>Verify Password</b></label></div>
+                            <div class="col-sm-5"><input type="password" placeholder="Enter Password" name="psw" required><br></div>
+                            <div class="col-sm-1"></div>
+                    </div>
+                   
+                    <div>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><label for="Test" ><b>Choose your user Profile</b></label></div>
+                            <div class="col-sm-5"><select class="custom-select" id="inputGroupSelect03">
+                                    <option selected>Choose...</option>
+                                    <option value="1">Doctor</option>
+                                    <option value="2">Patient</option>
+                                    <option value="3">Health Enthusiast</option>
+                                    <option value="4">Developer</option>
+                                  </select></div>
+                    </div>
+                    <div class="col-sm-12"></div>
+                    <div class="col-sm-12"></div>
+                    <div>
+                        <div class="col-sm-4"></div>    
+                        <div class="col-sm-2"><a class="btn btn-default btn-lg" href="home" role="button">Sign up</a></div>
+                        <div class="col-sm-2"><a class="btn btn-primary btn-lg" href="index" role="button">Cancel</a><br></div>
+                            
+                    </div>
+    
+                   
+                </div>    
+            </div>
+
+        </div>
+        </form>
+    </div>
+
+  <div id="about" class="container-fluid">
+        <div class="row">
+                <h2 class = "text-center">About Plus Health</h2><br>
+                <h4>
+                        Plus health is a family of health applications and services that makes it easier for a person to be healthy, makes it easier for hospital and doctors to directly track a patient's health and communicate with patients swiftly. Plus health helps a patient to keep track of his symptoms and predict the disease according to it and makes it possible for patients to seamlessly schedule an appointment with doctors.</h4>
+                    <br>
+                    <div class = "text-center">
+                    <button id="sign-btn2" class="btn btn-default btn-lg text-center">Get in Touch</button>
+                        </div>
+            
+        </div>
+    </div>
+    <div id="symptomtracker" class="container-fluid text-center">
+            <div class="row">
+                    <h2>Here is what out Symptom tracker Does</h2>
+                    <h4>
+                        Plus health is a family of health applications and services that makes it easier for a person to be healthy, makes it easier for hospital and doctors to directly track a patient's health and communicate with patients swiftly. Plus health helps a patient to keep track of his symptoms and predict the disease according to it and makes it possible for patients to seamlessly schedule an appointment with doctors.</h4>
+                    
+                        
+            
+                
+            </div>
+    </div>
+    <div id="contact" class="container-fluid text-center">
+            <div class="row">
+                    <h2>Try out developer chart Tool to contact us</h2>
+                         <br><button id="sign-btn2" class="btn btn-default btn-lg">Here is the link</button>
+            
+                
+            </div>
+    </div>
+
+   
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>For suggestions, please contact us at <a href="mailto:bruwali@troy.edu">Bikash Ruwali </a><a> or </a><a href="mailto:dkhati@troy.edu">Dipin Khati</a></p>
+    </footer>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

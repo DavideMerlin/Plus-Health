@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset= "utf-8">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/css/styles.css" rel="stylesheet" />
+
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        
+            <div class="navbar-header">
+                <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+                    <i class="fa fa-chevron-circle-down " style="font-size:35px;"></i>
+                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <img src="/images/logo.png" width="150" height="50"/>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-left">
+                    <%for(let i = 0; i < nav.length; i++) {%>
+                        <li>
+                            <a href="<%=nav[i].link%>"><%=nav[i].title%></a>
+                        </li>
+                    <%}%>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <form>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </li>
+
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bell fa-fw" style="font-size:20px;"></i>
+                            <span class="badge badge-danger">3</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+                            <a class="dropdown-item" href="#" style="color:aqua;">Read Alerts</a>
+                            <a class="dropdown-item" href="#" style="color:aqua;">Landlord Notificaitons</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" style="color:aqua;">Delete Notifications</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-envelope fa-fw" style="font-size:20px;"></i>
+                            <span class="badge badge-danger">9+</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
+                            <a class="dropdown-item" href="#">Read Messages</a>
+                            <a class="dropdown-item" href="#">Send Messages</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Mark Messages as Read</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user-circle fa-fw" style="font-size:20px;"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">Activity Log</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+
+            
+
+        </nav>
+        <div class="jumbotron text-center stage"> <h1> Medication </h1></div>    
+        
+        
+
+    
+
+    <footer class="container-fluid text-center">
+        
+        <div class = "col-sm-12">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <a href="https://www.linkedin.com/in/bikashrumey">Visit Our LinkedIn Profile!</a>
+        <p>For suggestions, please contact us at <a href="mailto:bruwali@troy.edu">Bikash Ruwali </a><a> or </a><a href="mailto:dkhati@troy.edu">Dipin Khati</a></p>
+        </div>
+    </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src = "/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
+</body>
+
+</html>
