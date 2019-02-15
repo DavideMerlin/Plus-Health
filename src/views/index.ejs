@@ -70,72 +70,67 @@
                 </div>
             </div>
         </form>
-        <form id="signup" class="form-inline text-left hidden-element">
+        <form id="signup" class="form-inline text-left hidden-element" action = "/auth/signUp" method="post" name = "signUpForm">
             <div class="container">
                 <br />
                 <div class="col-sm-12">
                     <div>
                         <div class="col-sm-3"></div>
                         <div class="col-sm-3"><label for="FirstName" ><b>First Name</b></label></div>
-                        <div class="col-sm-5"><input type="text" placeholder="Enter your First Name" name="fname" required><br></div>
+                        <div class="col-sm-5"><input type="text" placeholder="Enter your First Name" name="firstname" id= "fname"required><br></div>
                         <div class="col-sm-1"></div>
                     </div>
                     <div>
                         <div class="col-sm-3"></div>
                         <div class="col-sm-3"><label for="LastName"><b>Last Name</b></label></div>
-                        <div class="col-sm-5"><input type="text" placeholder="Enter your Last Name" name="lname" required><br></div>
+                        <div class="col-sm-5"><input type="text" placeholder="Enter your Last Name" name="lastname" id="lname"required><br></div>
                         <div class="col-sm-1"></div>
                     </div>
                     <div>
                             <div class="col-sm-3"></div>
                             <div class="col-sm-3"><label for="Email-Address" ><b>Email-Address</b></label></div>
-                            <div class="col-sm-5"><input type="text" placeholder="Enter your Email-address" name="uname" required><br></div>
+                            <div class="col-sm-5"><input type="text" placeholder="Enter your Email-address" name="email" id="email" required><br></div>
                             <div class="col-sm-1"></div>
                     </div>
                     <div>
                             <div class="col-sm-3"></div>
                             <div class="col-sm-3"><label for="PhoneNumber" ><b>PhoneNumber</b></label></div>
-                            <div class="col-sm-5"><input type="text" placeholder="Enter your PhoneNumber" name="uname" required><br></div>
+                            <div class="col-sm-5"><input type="text" placeholder="Enter your PhoneNumber" name="phonenumber" id = "phonenumber" required><br></div>
                             <div class="col-sm-1"></div>
                     </div>   
                    
                     <div>
                             <div class="col-sm-3"></div>
                             <div class="col-sm-3"><label for="Username"><b>Username</b></label></div>
-                            <div class="col-sm-5"><input type="text" placeholder="Enter your Desired Username" name="uname" required><br></div>
+                            <div class="col-sm-5"><input type="text" placeholder="Enter your Desired Username" name="username" name="username" required><br></div>
                             <div class="col-sm-1"></div>
                     </div>
                     <div>
                             <div class="col-sm-3"></div>
                             <div class="col-sm-3"><label for="psw" ><b>Password</b></label></div>
-                            <div class="col-sm-5"><input type="password" placeholder="Enter Password" name="psw" required><br></div>
+                            <div class="col-sm-5"><input type="password" placeholder="Enter Password" name="password"  id="password" required><br></div>
                             <div class="col-sm-1"></div>
                     </div>
                     <div>
                             <div class="col-sm-3"></div>
                             <div class="col-sm-3"><label for="psw" ><b>Verify Password</b></label></div>
-                            <div class="col-sm-5"><input type="password" placeholder="Enter Password" name="psw" required><br></div>
+                            <div class="col-sm-5"><input type="password" placeholder="Enter Password" name="password2" id="password2" required><br></div>
                             <div class="col-sm-1"></div>
                     </div>
                    
                     <div>
                             <div class="col-sm-3"></div>
-                            <div class="col-sm-3"><label for="Test" ><b>Choose your user Profile</b></label></div>
-                            <div class="col-sm-5"><select class="custom-select" id="inputGroupSelect03">
-                                    <option selected>Choose...</option>
-                                    <option value="1">Doctor</option>
-                                    <option value="2">Patient</option>
-                                    <option value="3">Health Enthusiast</option>
-                                    <option value="4">Developer</option>
-                                  </select></div>
+                            <div class="col-sm-3"><label for="profile" ><b>What kind of user are you?</b></label></div>
+                            <div class="col-sm-5"><input type="text" placeholder="Enter User Profile" name="profile" id="profile" required><br></div>
+                            <div class="col-sm-1"></div>
                     </div>
                     <div class="col-sm-12"></div>
                     <div class="col-sm-12"></div>
                     <div>
                         <div class="col-sm-4"></div>    
-                        <div class="col-sm-2"><a class="btn btn-default btn-lg" href="home" role="button">Sign up</a></div>
-                        <div class="col-sm-2"><a class="btn btn-primary btn-lg" href="index" role="button">Cancel</a><br></div>
-                            
+                        <div class="col-sm-2"><input class="btn btn-default btn-lg" type = "submit" value = "Sign Up"> </div>
+                        <div class="col-sm-2"><input class="btn btn-primary btn-lg" href = '' type = "button" value = "Cancel"><br></div>
+                        <div class="col-sm-4"></div> 
                     </div>
     
                    
@@ -187,8 +182,9 @@
     </footer>
 
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
