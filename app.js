@@ -1,14 +1,19 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const chalk = require('chalk');
 const debug = require('debug')('app');
 const morgan = require('morgan');
 const path = require('path');
 
 const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 const port = process.env.PORT || 3000;
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 app.use('/css', express.static(path.join(__dirname, '/node_module/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, '/node_module/bootstrap/dist/js')));
 app.use('/js', express.static(path.join(__dirname, '/node_module/jquery/dist')));
@@ -30,6 +35,6 @@ app.get('/', (req, res) => {
   );
 });
 
-app.listen(port, () => {
+var server = http.listen(port, () => {
   debug(`listening on port ${chalk.green(port)}`);
 });

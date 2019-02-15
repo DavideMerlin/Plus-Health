@@ -1,5 +1,22 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+const mongoose = require('mongoose');
 const homeRouter = express.Router();
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, '/public')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
+var dbUrl = 'mongodb+srv://user:user@plushealth-iizho.mongodb.net/plushealth?ssl=true&authSource=admin'
+
+var Message = mongoose.model('Message', {
+  name: String,
+  message: String
+});
 
 homeRouter.route('/')
   .get((req, res) => {
@@ -15,6 +32,43 @@ homeRouter.route('/')
         title: 'Plus Health Home'
       });
   });
+
+homeRouter.route('/messages')
+  .get((req, res) => {
+    Message.find({},(err, messages) => {
+      res.send(messages);
+    });
+  });
+
+homeRouter.route('/messages')
+  .post((req, res) => {
+    var message = new Message(req.body);
+    
+    message.save()
+    .then( item => {
+        console.log("item saved to database");
+        
+        io.emit('message',req.body);
+        res.sendStatus(200);
+    
+    })
+    .catch(err => {
+        sendStatus(500);
+    });  
+  });
+  
+io.on('connection', (socket) => {
+    console.log('a user connected to our server');
+}) 
+
+mongoose.connect(dbUrl, {useNewUrlParser: true}, function(err, db){
+    console.log('mongo db connection', err);
+})
+
+
+homeRouter.get('/', function(req, res, next){
+    res.render('index', {title: 'Express'});
+});
 
 homeRouter.route('/symptomtracker')
   .get((req, res) => {
