@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset= "utf-8">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    
+    
+    <link href="http://localhost:4000/css/styles.css" rel="stylesheet" />
+
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <img src="http://localhost:4000/images/logo.png" width="150" height="50"/>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <%for(let i = 0; i < nav.length; i++) {%>
+                   <li>
+                        <a href="<%=nav[i].link%>"><%=nav[i].title%></a>
+                   </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center stage">
+        <h1><%=title%></h1>
+        <p>Changing the Health Sector</p>
+        <figure class="ball"></figure>
+        <figure class="ball1"></figure>
+        <div class="row justify-content-center">
+            <a  class="btn btn-default btn-lg" href="/" role="button" method = "post">Don't have an Account? Sign Up!</a>
+
+        </div>
+        <form id="signin" class="form-inline text-left " name="signInForm" action="/auth/signin" method="post">
+            <div class="container">
+                <br />
+                <div class="col-sm-12">
+                  <div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3"><label for="FirstName" ><b>Username</b></label></div>
+                        <div class="col-sm-5"><input type="text" placeholder="Enter your Username" name="username" id= "username"required><br></div>
+                        <div class="col-sm-1"></div>
+                   </div>
+                    <div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3"><label for="LastName"><b>Password</b></label></div>
+                        <div class="col-sm-5"><input type="text" placeholder="Enter your password" name="password" id="password"required><br></div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                     <div>
+                        <div class="col-sm-5"></div>    
+                        <div class="col-sm-2"><input class="btn btn-primary btn-lg" type = "submit" value = "Sign In!"/></div>
+                        <div class="col-sm-5"></div>   
+                    </div>
+                    <div class="col-sm-12"></div>
+                    <div class="col-sm-12"></div>
+                </div>
+            <div>
+        <form>
+
+     
+    </div>
+
+   
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>For suggestions, please contact us at <a href="mailto:bruwali@troy.edu">Bikash Ruwali </a><a> or </a><a href="mailto:dkhati@troy.edu">Dipin Khati</a></p>
+    </footer>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="http://localhost:4000/js/main.js"></script>
+</body>
+</html>

@@ -235,7 +235,7 @@
             var message = {name: $("#name").val(), message: $("#message").val()}
             postMessage(message)
         }) 
-        getMessages()
+        addMessage()
     })
 
     socket.on('message', addMessage)
@@ -245,11 +245,7 @@
         p = message.message
         $("#messages").append(' <p><strong>'+n+ '</strong>'+': '+ p+'</p> ')
     }
-    function getMessages(){
-        $.get('http://localhost:4000/home/messages', (data) => {
-            data.forEach(addMessage);
-        })
-    }
+    
     function postMessage(message){
         $.post('http://localhost:4000/home/messages',message)
     }
